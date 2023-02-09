@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riba", "Riba.csproj", "{EB373DF4-6DBA-483C-9026-E42C11F8F605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{C097A33C-D1DB-4B30-AC34-5B305C3233FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB373DF4-6DBA-483C-9026-E42C11F8F605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB373DF4-6DBA-483C-9026-E42C11F8F605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB373DF4-6DBA-483C-9026-E42C11F8F605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB373DF4-6DBA-483C-9026-E42C11F8F605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C097A33C-D1DB-4B30-AC34-5B305C3233FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C097A33C-D1DB-4B30-AC34-5B305C3233FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C097A33C-D1DB-4B30-AC34-5B305C3233FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C097A33C-D1DB-4B30-AC34-5B305C3233FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {611A9D63-E7B4-422D-B58E-DE11B580556F}
+	EndGlobalSection
+EndGlobal
