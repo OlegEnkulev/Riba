@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="edc906c8780d465ba406a282c454b8a6" Name="Diagram1" ZoomLevel="47">
+      <Diagram DiagramId="edc906c8780d465ba406a282c454b8a6" Name="Diagram1" ZoomLevel="81">
         <EntityTypeShape EntityType="RibkaModel.Category" Width="1.5" PointX="3" PointY="10" />
         <EntityTypeShape EntityType="RibkaModel.Order" Width="1.5" PointX="5.25" PointY="1" />
         <EntityTypeShape EntityType="RibkaModel.OrderProduct" Width="1.5" PointX="7.5" PointY="1.5" />
