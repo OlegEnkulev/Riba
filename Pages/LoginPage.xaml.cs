@@ -73,6 +73,8 @@ namespace Riba.Pages
         private void Mistake()
         {
             MessageBox.Show("Проверьте правильность введённых данных!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            Windows.CapchaWindow capchaWindow = new Windows.CapchaWindow();
+            capchaWindow.Show();
         }
     }
 }

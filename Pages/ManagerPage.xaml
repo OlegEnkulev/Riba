@@ -50,6 +50,14 @@
             <TextBox x:Name="SearchBox" Margin="5" TextChanged="SearchBox_TextChanged"/>
             <Label Content="Категория:" Margin="5"/>
             <ComboBox x:Name="CategoriesCB" Margin="5"/>
+            <Label Content="Сортировать по:" Margin="5"/>
+            <ComboBox x:Name="SortCB" Margin="5">
+                <ComboBoxItem Content="Алфавит"/>
+                <ComboBoxItem Content="Цена(Возростание)"/>
+                <ComboBoxItem Content="Цена(Убывание)"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
             <Button Content="Поиск" x:Name="SearchBTN" Click="SearchBTN_Click"/>
             <Button Content="Назад" x:Name="BackBTN" Click="BackBTN_Click"/>
         </StackPanel>

@@ -22,14 +22,13 @@ namespace Riba.Pages
         {
             InitializeComponent();
 
-            NameLabel.Content = "Пользователь: " + Core.currentUser.UserPatronymic + " " + Core.currentUser.UserName + " " + Core.currentUser.UserSurname;
-
             CategoriesCB.Items.Add("Не выбрано");
             for (int i = 0; i < Core.DB.Category.Count(); i++)
             {
                 CategoriesCB.Items.Add(Core.DB.Category.ToList()[i].CategoryName);
             }
             CategoriesCB.SelectedIndex = 0;
+            SortCB.SelectedIndex = 0;
 
             Search();
         }
@@ -44,27 +43,80 @@ namespace Riba.Pages
                 productViews.Add(new ProductView(products[i].ProductArticleNumber, products[i].ProductName, products[i].ProductPeace, products[i].ProductCost, Convert.ToInt32(products[i].ProductMaxDiscount), products[i].ProductManufacturer, products[i].ProductDeliverer, products[i].ProductCategory, Convert.ToInt32(products[i].ProductDiscountAmount), products[i].ProductQuantityInStock, products[i].ProductDescription, products[i].ProductPhoto));
             }
 
-            if (CategoriesCB.SelectedIndex == 0)
+            switch (SortCB.SelectedIndex)
             {
-                if (SearchBox.Text.Count() == 0)
-                {
-                    ProductsLB.ItemsSource = productViews;
-                }
-                else
-                {
-                    ProductsLB.ItemsSource = productViews.Where(v => v.ProductString.Contains(SearchBox.Text)).ToList();
-                }
-            }
-            else
-            {
-                if (SearchBox.Text.Count() == 0)
-                {
-                    ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text).ToList();
-                }
-                else
-                {
-                    ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text && v.ProductString.Contains(SearchBox.Text)).ToList();
-                }
+                case 0:
+                    if (CategoriesCB.SelectedIndex == 0)
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.OrderBy(o => o.Name);
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.ProductString.Contains(SearchBox.Text)).OrderBy(o => o.Name).ToList();
+                        }
+                    }
+                    else
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text).OrderBy(o => o.Name).ToList();
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text && v.ProductString.Contains(SearchBox.Text)).OrderBy(o => o.Name).ToList();
+                        }
+                    }
+                    break;
+                case 1:
+                    if (CategoriesCB.SelectedIndex == 0)
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.OrderBy(o => o.Cost);
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.ProductString.Contains(SearchBox.Text)).OrderBy(o => o.Cost).ToList();
+                        }
+                    }
+                    else
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text).OrderBy(o => o.Cost).ToList();
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text && v.ProductString.Contains(SearchBox.Text)).OrderBy(o => o.Cost).ToList();
+                        }
+                    }
+                    break;
+                case 2:
+                    if (CategoriesCB.SelectedIndex == 0)
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.OrderByDescending(o => o.Cost);
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.ProductString.Contains(SearchBox.Text)).OrderByDescending(o => o.Cost).ToList();
+                        }
+                    }
+                    else
+                    {
+                        if (SearchBox.Text.Count() == 0)
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text).OrderByDescending(o => o.Cost).ToList();
+                        }
+                        else
+                        {
+                            ProductsLB.ItemsSource = productViews.Where(v => v.CategoryName == CategoriesCB.Text && v.ProductString.Contains(SearchBox.Text)).OrderByDescending(o => o.Cost).ToList();
+                        }
+                    }
+                    break;
             }
         }
 

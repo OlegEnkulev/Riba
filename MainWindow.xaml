@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Riba"
         mc:Ignorable="d"
-        Title="ООО «Рыбалка»  - магазин по продаже товаров для рыбалки в Абакане." Height="750" Width="1100" MinHeight="450" MinWidth="800">
+        Title="ООО «Рыбалка»  - магазин по продаже товаров для рыбалки в Абакане." Height="500" Width="900" MinHeight="500" MinWidth="900">
     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
 </Window>

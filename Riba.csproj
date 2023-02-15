@@ -125,6 +125,9 @@
     <Compile Include="Resources\User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CapchaWindow.xaml.cs">
+      <DependentUpon>CapchaWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CapchaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +223,7 @@
     <Resource Include="Images\PILLFW.jpg" />
     <Resource Include="Images\SOIPEQ.jpg" />
     <Resource Include="Images\picture.png" />
+    <Resource Include="Images\Capcha.png" />
     <Content Include="Resources\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>
