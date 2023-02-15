@@ -23,7 +23,7 @@ namespace Riba.Resources
         public string ProductArticleNumber { get; set; }
         public string ProductName { get; set; }
         public string ProductPeace { get; set; }
-        public int ProductCost { get; set; }
+        public decimal ProductCost { get; set; }
         public Nullable<int> ProductMaxDiscount { get; set; }
         public string ProductManufacturer { get; set; }
         public string ProductDeliverer { get; set; }

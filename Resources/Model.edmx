@@ -47,7 +47,7 @@
           <Property Name="ProductArticleNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ProductPeace" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="ProductCost" Type="int" Nullable="false" />
+          <Property Name="ProductCost" Type="decimal" Precision="19" Scale="2" Nullable="false" />
           <Property Name="ProductMaxDiscount" Type="int" />
           <Property Name="ProductManufacturer" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ProductDeliverer" Type="nvarchar(max)" Nullable="false" />
@@ -267,7 +267,7 @@
           <Property Name="ProductArticleNumber" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ProductName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ProductPeace" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ProductCost" Type="Int32" Nullable="false" />
+          <Property Name="ProductCost" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
           <Property Name="ProductMaxDiscount" Type="Int32" />
           <Property Name="ProductManufacturer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ProductDeliverer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -373,7 +373,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

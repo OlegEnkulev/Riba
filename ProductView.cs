@@ -11,7 +11,7 @@ namespace Riba
         public string Article { get; set; }
         public string Name { get; set; }
         public string Peace { get; set; }
-        public int Cost { get; set; }
+        public decimal Cost { get; set; }
         public int MaxDiscount { get; set; }
         public string Manufacturer { get; set; }
         public string Deliverer { get; set; }
@@ -25,7 +25,7 @@ namespace Riba
         public string PhotoPath { get; set; }
         public string ProductString { get; set; }
 
-        public ProductView(string article, string name, string peace, int cost, int maxDiscount, string manufacturer, string deliverer, int category, int discountAmount, int quantityInStock, string description, string photo)
+        public ProductView(string article, string name, string peace, decimal cost, int maxDiscount, string manufacturer, string deliverer, int category, int discountAmount, int quantityInStock, string description, string photo)
         {
             Article = article;
             Name = name;
